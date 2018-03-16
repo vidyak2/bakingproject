@@ -6,7 +6,6 @@
 
   img.backgroundimg {
     width: 100vmax;
-    min-width: 100vmin;
     opacity: 0.2;
     position: absolute;
   }
@@ -25,8 +24,29 @@
   }
 
   .container {
+    display: flex;
+    flex-wrap: wrap;
     margin: 2rem;
   }
+
+  /* TO BE CHANGED!!!!!! */
+
+  .item {
+    flex-direction: column;
+    border: 1.5px solid #e6ebff;
+  }
+
+  .itemimg {
+    width: 40%;
+    height: 40%;
+  }
+
+  /*
+  img {
+    width: 40%;
+    height: 40%;
+  }
+*/
 
   h2 {
     font-size: 2rem;
