@@ -6,8 +6,11 @@
 
   img.backgroundimg {
     width: 100vmax;
+    min-width: 100vmin;
     opacity: 0.2;
     position: absolute;
+    /* To put the image behind the links */
+    z-index: -1;
   }
 
   body {
@@ -37,8 +40,8 @@
   }
 
   .itemimg {
-    width: 40%;
-    height: 40%;
+    width: 20%;
+    height: 20%;
   }
 
   /*
