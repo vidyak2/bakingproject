@@ -142,7 +142,21 @@
   /*Footer styles*/
 
   footer {
+    display: block;
+    position: relative;
     text-align: center;
     padding: 1rem;
     margin: auto;
+  }
+
+  article.footer {
+    clear: both;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  p.foot {
+    line-height: 0rem;
+    padding: 0.5rem;
+    text-align: center;
   }
