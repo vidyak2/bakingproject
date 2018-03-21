@@ -4,19 +4,51 @@
     box-sizing: border-box;
   }
 
+  /*Home page styles*/
+
   img.backgroundimg {
     width: 100vmax;
     min-width: 100vmin;
+    max-height: 100vmax;
     opacity: 0.2;
     position: absolute;
     /* To put the image behind the links */
     z-index: -1;
   }
 
+  .containerhome {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home {
+    font-size: 70px;
+    align-self: center;
+    margin: auto;
+    padding: 8rem;
+    position: relative;
+
+  }
+
+  .phome {
+    font-size: 28px;
+    align-self: center;
+    margin: auto;
+    font-family: 'Dancing Script', cursive;
+  }
+
+
+  /*General styles*/
+
+  .main {
+    background-color: white;
+    border-left: rgb(255, 240, 242) solid 8em;
+    border-right: rgb(255, 240, 242) solid 8em;
+  }
+
   body {
     font-size: 100%;
     font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-    background-color: rgb(255, 240, 242);
   }
 
   h1 {
@@ -30,37 +62,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 2rem;
-  }
 
-  /* TO BE CHANGED!!!!!! */
-
-  .item {
-    flex-direction: column;
-    border: 1.5px solid #e6ebff;
-  }
-
-  .itemimg {
-    width: 20%;
-    height: 20%;
-  }
-
-  /*
-  img {
-    width: 40%;
-    height: 40%;
-  }
-*/
-
-  h2 {
-    font-size: 2rem;
-    padding: 1rem;
-    font-family: 'Parisienne', cursive;
-  }
-
-  p {
-    text-indent: 2rem;
-    line-height: 1.5rem;
-    padding: 1rem;
   }
 
   .mainnav {
@@ -91,4 +93,56 @@
 
   .intext {
     text-decoration: underline;
+  }
+
+  /* 2 items per row and the rest goes to the next row. Width = 100%/2 = 50% for each product. Flex-basis=50%. EXCEPT: because of padding = 2%, width will be over 100%. Substract 4% (2%*2%) from 46%: flex-basis = 46% */
+
+  div {
+    display: inline-flex;
+  }
+
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .itemdiv {
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 46%;
+
+    padding: 2%;
+    border: 1.5px solid #f7cae4;
+  }
+
+  /*Recipe page styles*/
+
+  .itemimg {
+    width: 50%;
+    height: 60%;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    padding: 1rem;
+    font-family: 'Parisienne', cursive;
+    align-self: center;
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5rem;
+    padding: 1rem;
+    align-self: center;
+    text-align: justify;
+
+  }
+
+  /*Footer styles*/
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
   }
