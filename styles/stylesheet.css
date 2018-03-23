@@ -4,7 +4,69 @@
     box-sizing: border-box;
   }
 
-  /*Home page styles*/
+  /* GENERAL STYLES */
+
+  .main {
+    background-color: white;
+    border-left: rgb(255, 240, 242) solid 8em;
+    border-right: rgb(255, 240, 242) solid 8em;
+  }
+
+  body {
+    font-size: 100%;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+    font-family: 'Parisienne', cursive;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+  }
+
+  /* MAIN NAV STYLES */
+
+  .mainnav {
+    display: flex;
+    padding: 0.5rem 2rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+  }
+
+  .rightside {
+    flex: 1;
+  }
+
+  /* Parent element */
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+  }
+
+  /* Children elements of ul */
+
+  li {
+    padding: 0.5rem 1rem;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .intext {
+    text-decoration: underline;
+  }
+
+  /* HOME PAGE */
 
   img.backgroundimg {
     width: 100vmax;
@@ -37,63 +99,7 @@
     font-family: 'Dancing Script', cursive;
   }
 
-
-  /*General styles*/
-
-  .main {
-    background-color: white;
-    border-left: rgb(255, 240, 242) solid 8em;
-    border-right: rgb(255, 240, 242) solid 8em;
-  }
-
-  body {
-    font-size: 100%;
-    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-  }
-
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    padding: 2rem;
-    font-family: 'Parisienne', cursive;
-  }
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem;
-
-  }
-
-  .mainnav {
-    flex-wrap: wrap;
-    padding: 0.5rem 2rem;
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-  }
-
-  /* Parent element */
-
-  ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: flex-end;
-  }
-
-  /* Children elements of ul */
-
-  li {
-    padding: 0.5rem 1rem;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .intext {
-    text-decoration: underline;
-  }
+  /* RECIPES PAGE */
 
   /* 2 items per row and the rest goes to the next row. Width = 100%/2 = 50% for each product. Flex-basis=50%. EXCEPT: because of padding = 2%, width will be over 100%. Substract 4% (2%*2%) from 46%: flex-basis = 46% */
 
@@ -139,7 +145,7 @@
 
   }
 
-  /*Footer styles*/
+  /* FOOTER STYLES */
 
   footer {
     display: block;
