@@ -6,47 +6,72 @@
 
   /* GENERAL STYLES */
 
-  .main {
-    background-color: white;
-    border-left: rgb(255, 240, 242) solid 8em;
-    border-right: rgb(255, 240, 242) solid 8em;
-  }
-
   body {
     font-size: 100%;
     font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
   }
 
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    padding: 2rem;
-    font-family: 'Parisienne', cursive;
+  .main {
+    background-color: white;
+    border-left: rgb(255, 240, 242) solid 8rem;
+    border-right: rgb(255, 240, 242) solid 8rem;
+    /* Height for border to span until the end of the page */
+    height: 100%;
   }
 
-  .container {
-    display: flex;
+
+  /* Resize pink borders & Delete for smallest screen size*/
+
+  @media screen and (max-width: 876px) {
+    .main {
+      border-left: rgb(255, 240, 242) solid 4rem;
+      border-right: rgb(255, 240, 242) solid 4rem;
+    }
+  }
+
+  @media screen and (max-width: 630px) {
+    .main {
+      border-left: rgb(255, 240, 242) solid 2rem;
+      border-right: rgb(255, 240, 242) solid 2rem;
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+    .main {
+      border-left: 0rem;
+      border-right: 0rem;
+    }
+  }
+
+  /* TOP HEADER (NAV + H1) */
+
+  /* Parent element */
+
+  div.topheader {
+    width: 100%;
+    display: inline-flex;
     flex-wrap: wrap;
-    margin: 2rem;
+    flex-direction: column;
+
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  /* MAIN NAV STYLES */
+  /* Children element #1 */
 
   .mainnav {
-    display: flex;
-    padding: 0.5rem 2rem;
+    align-self: flex-end;
+    flex-wrap: wrap;
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
-  }
-
-  .rightside {
-    flex: 1;
+    padding: 0.5rem;
   }
 
   /* Parent element */
 
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     justify-content: flex-end;
   }
@@ -66,6 +91,82 @@
     text-decoration: underline;
   }
 
+  /* Children element #2 */
+
+  h1 {
+    align-self: center;
+    font-size: 3rem;
+    padding: 2rem;
+    font-family: 'Parisienne', cursive;
+  }
+
+  /* Resize h1 */
+
+  @media screen and (max-width: 764px) {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 606px) {
+    h1 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .mainnav {
+      width: 100%;
+    }
+    ul {
+      justify-content: space-between;
+    }
+  }
+
+
+  /* MAIN CONTAINER */
+
+  /* Parent element */
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  /* Resize container */
+
+  @media screen and (max-width: 764px) {
+    .container {
+      margin: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 606px) {
+    .container {
+      margin: 0.2rem;
+    }
+  }
+
+  /* Children elements */
+
+  h2 {
+    align-content: flex-start;
+    font-size: 1.8rem;
+    padding: 1rem;
+    font-family: 'Parisienne', cursive;
+  }
+
+  p {
+    line-height: 1.5rem;
+    padding: 1rem;
+    align-self: center;
+    text-align: justify;
+  }
+
+
   /* HOME PAGE */
 
   img.backgroundimg {
@@ -74,7 +175,7 @@
     max-height: 100vmax;
     opacity: 0.2;
     position: absolute;
-    /* To put the image behind the links */
+    /* Place background image behind links */
     z-index: -1;
   }
 
@@ -99,70 +200,102 @@
     font-family: 'Dancing Script', cursive;
   }
 
+
+
   /* RECIPES PAGE */
-
-  /* 2 items per row and the rest goes to the next row. Width = 100%/2 = 50% for each product. Flex-basis=50%. EXCEPT: because of padding = 2%, width will be over 100%. Substract 4% (2%*2%) from 46%: flex-basis = 46% */
-
-  div {
-    display: inline-flex;
-  }
 
   .parent {
     display: flex;
     flex-wrap: wrap;
   }
 
+  /* Parent element */
+
   .itemdiv {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    flex-grow: 1;
-    flex-basis: 46%;
 
     padding: 2%;
     border: 1.5px solid #f7cae4;
+
+    flex-grow: 1;
+    flex-basis: 46%;
   }
 
-  /*Recipe page styles*/
+  /* Children elements */
+
+  .itemh2 {
+    align-self: center;
+
+    font-size: 1.6rem;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+  }
+
+  .itemp {
+    flex-grow: 1;
+    align-self: center;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 
   .itemimg {
-    width: 50%;
-    height: 60%;
-    margin: auto;
+    max-width: 40%;
+    max-height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    flex-grow: 1;
   }
 
-  h2 {
-    font-size: 1.8rem;
-    padding: 1rem;
-    font-family: 'Parisienne', cursive;
-    align-self: center;
-    text-align: center;
-  }
+  /* Reduce to one item per line */
 
-  p {
-    line-height: 1.5rem;
-    padding: 1rem;
-    align-self: center;
-    text-align: justify;
-
+  @media screen and (max-width: 630px) {
+    .itemdiv {
+      display: flex;
+      flex-grow: 1;
+      flex-basis: 96%;
+    }
   }
 
   /* FOOTER STYLES */
 
+  /* Parent element */
+
   footer {
     display: block;
     position: relative;
-    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
     padding: 1rem;
     margin: auto;
+    flex-grow: 1;
   }
 
-  article.footer {
-    clear: both;
-    font-size: 10px;
-    text-align: center;
+  /* Children elements */
+
+  .icons {
+    align-self: center;
+    flex-grow: 1;
+  }
+
+  div a {
+    padding: 0.5rem;
+    flex-grow: 1;
   }
 
   p.foot {
-    line-height: 0rem;
-    padding: 0.5rem;
+    flex-grow: 1;
     text-align: center;
+    font-size: 10px;
+    line-height: 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.55rem;
   }
