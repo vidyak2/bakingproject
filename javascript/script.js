@@ -43,26 +43,29 @@ var cakes = [
 
 function muffinList() {
 
-  // select element with id "target"
+  // Select element with id "target"
   var container = document.getElementById("target")
-  // give it a class of "parent"
+  // Give a class of "parent"
   container.classList.add("parent")
 
-  //We want to create product listings from a databse, and not on HTML. On HTML, you can't change anything, in a database, you can change easily
+  //Create product listing from a database
   for (var i = 0; i < muffins.length; i++) {
 
     var div = document.createElement("div")
-    div.classList.add("itemdiv")
     //Add class to add styles
-    //    divV.classList.add("listing")
+    div.classList.add("itemdiv")
+
     var h2 = document.createElement("h2")
     h2.innerHTML = muffins[i].name
+    h2.classList.add("itemh2")
+
     var p = document.createElement("p")
     p.innerHTML = muffins[i].p
+    p.classList.add("itemp")
+
     var img = document.createElement("img")
     img.setAttribute("src", muffins[i].image)
     img.setAttribute("alt", muffins[i].name)
-    //Add class to add styles
     img.classList.add("itemimg")
 
 
@@ -70,8 +73,6 @@ function muffinList() {
     div.appendChild(img)
     div.appendChild(p)
     container.appendChild(div)
-
-
   }
 }
 
@@ -79,26 +80,25 @@ muffinList()
 
 function pieList() {
 
-  // select element with id "target"
   var container = document.getElementById("pietarget")
-  // give it a class of "parent"
   container.classList.add("parent")
 
-  //We want to create product listings from a databse, and not on HTML. On HTML, you can't change anything, in a database, you can change easily
   for (var i = 0; i < pies.length; i++) {
 
     var div = document.createElement("div")
     div.classList.add("itemdiv")
-    //Add class to add styles
-    //    divV.classList.add("listing")
+
     var h2 = document.createElement("h2")
     h2.innerHTML = pies[i].name
+    h2.classList.add("itemh2")
+
     var p = document.createElement("p")
     p.innerHTML = pies[i].p
+    p.classList.add("itemp")
+
     var img = document.createElement("img")
     img.setAttribute("src", pies[i].image)
     img.setAttribute("alt", pies[i].name)
-    //Add class to add styles
     img.classList.add("itemimg")
 
 
@@ -106,8 +106,6 @@ function pieList() {
     div.appendChild(img)
     div.appendChild(p)
     container.appendChild(div)
-
-
   }
 }
 
@@ -115,26 +113,25 @@ pieList()
 
 function cakeList() {
 
-  // select element with id "target"
   var container = document.getElementById("caketarget")
-  // give it a class of "parent"
   container.classList.add("parent")
 
-  //We want to create product listings from a databse, and not on HTML. On HTML, you can't change anything, in a database, you can change easily
   for (var i = 0; i < cakes.length; i++) {
 
     var div = document.createElement("div")
     div.classList.add("itemdiv")
-    //Add class to add styles
-    //    divV.classList.add("listing")
+
     var h2 = document.createElement("h2")
     h2.innerHTML = cakes[i].name
+    h2.classList.add("itemh2")
+
     var p = document.createElement("p")
     p.innerHTML = cakes[i].p
+    p.classList.add("itemp")
+
     var img = document.createElement("img")
     img.setAttribute("src", cakes[i].image)
     img.setAttribute("alt", cakes[i].name)
-    //Add class to add styles
     img.classList.add("itemimg")
 
 
@@ -142,8 +139,6 @@ function cakeList() {
     div.appendChild(img)
     div.appendChild(p)
     container.appendChild(div)
-
-
   }
 }
 
