@@ -38,6 +38,11 @@ var cakes = [
     name: "Mini Chocolate Bundt Cakes",
     p: "Baking bundt cakes can be tricky, because the consistency may vary depending on the pan. This is my very first bundt cake recipe, made with the same recipe as the chocolate muffins. Suggested baker level: Begginer",
     image: "images/minibundt.JPG"
+  },
+  {
+    name: "Chocalate and Vanille Layer Cookie Cake",
+    p: "Baking this layer cake is more difficult than it seems, since the base vailla layer is lightly cooked before adding the chocolate batter and cooking the cake again. Suggested baker level: Intermediate",
+    image: "images/chocvanillacake.JPG"
   }
 ]
 
