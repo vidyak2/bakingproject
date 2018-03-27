@@ -39,6 +39,9 @@
     .main {
       border-left: 0rem;
       border-right: 0rem;
+
+
+      background-color: rgb(255, 240, 242);
     }
   }
 
@@ -185,6 +188,28 @@
     margin-right: 8rem;
   }
 
+
+  @media screen and (max-width: 876px) {
+    .contain {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 630px) {
+    .contain {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+    .contain {
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+  }
+
   .bodyhome {
     background-image: url("/images/background.jpg");
     background-position: center;
@@ -312,9 +337,6 @@
   /* Parent element */
 
   footer {
-    display: block;
-    position: relative;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -343,4 +365,12 @@
     line-height: 0rem;
     padding-top: 0.5rem;
     padding-bottom: 0.55rem;
+  }
+
+  /* Resize footer */
+
+  @media screen and (max-width: 212px) {
+    footer {
+      padding: 0rem;
+    }
   }
