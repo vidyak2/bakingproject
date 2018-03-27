@@ -19,7 +19,6 @@
     height: 100%;
   }
 
-
   /* Resize pink borders & Delete for smallest screen size*/
 
   @media screen and (max-width: 876px) {
@@ -169,14 +168,33 @@
 
   /* HOME PAGE */
 
+  /*
   img.backgroundimg {
     width: 100vmax;
     min-width: 100vmin;
     max-height: 100vmax;
     opacity: 0.2;
     position: absolute;
-    /* Place background image behind links */
+     Place background image behind links 
     z-index: -1;
+  }
+*/
+
+  .contain {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .bodyhome {
+    background-image: url("/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   .containerhome {
@@ -190,17 +208,45 @@
     margin: auto;
     padding: 8rem;
     position: relative;
+  }
 
+  /* Resize text */
+
+  @media screen and (max-width: 1064px) {
+    .home {
+      font-size: 60px;
+      padding: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 686px) {
+    .home {
+      font-size: 50px;
+      padding: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 364px) {
+    .home {
+      padding: 0.5rem;
+    }
   }
 
   .phome {
+    flex-wrap: wrap;
     font-size: 28px;
     align-self: center;
     margin: auto;
     font-family: 'Dancing Script', cursive;
   }
 
+  @media screen and (max-width: 614px) {
+    .phome {
+      font-size: 20px;
+      text-align: center;
+    }
 
+  }
 
   /* RECIPES PAGE */
 
@@ -244,7 +290,6 @@
   }
 
   .itemimg {
-    max-width: 40%;
     max-height: 10rem;
     margin-left: auto;
     margin-right: auto;
