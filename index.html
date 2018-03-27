@@ -19,29 +19,41 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
-<body>
+<body class="bodyhome">
 
   <header>
-    <div class="topheader">
-      <img class="backgroundimg" src="images/background.jpg" alt="background">
-      <!--Main nav-->
-      <nav class="mainnav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-        </ul>
-      </nav>
+    <div class="contain">
+      <div class="topheader">
 
-      <!-- Search Form on Submit-->
-      <article class="rightside">
-        <form name="search" onsubmit="searching()">
-          <label>
+        <!--
+      <div class="back">
+        <img class="backgroundimg" srcset="images/background960px.jpg 960w, images/background700px.jpg 700w, images/background320px.jpg 320w," sizes="(max-width: 540px) 700px, (max-width: 1200px) 960px, (min-width: 1201px) 1197px" src="images/background.jpg" alt="background">
+      </div>
+-->
+
+        <!--Main nav-->
+        <nav class="mainnav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+          </ul>
+        </nav>
+
+        <!-- Search Form on Submit-->
+
+        <!--
+        <article class="rightside">
+          <form name="search" onsubmit="searching()">
+            <label>
             <input class="topsearch" type="text" name="searchbar" placeholder="Search by keyword">
             <i class="fas fa-search"></i>
           </label>
-        </form>
-      </article>
+          </form>
+        </article>
+-->
+
+      </div>
     </div>
   </header>
 
@@ -55,7 +67,7 @@
   <footer>
     <article class="footer">
       <p class="foot">&copy; 2018 || Vidya Krishnan</p>
-      <p class="foot">Last modified on <time datetime="2018-03-27">March 21 2018</time></p>
+      <p class="foot">Last modified on <time datetime="2018-03-27">March 27 2018</time></p>
     </article>
 
     <div class="icons">
