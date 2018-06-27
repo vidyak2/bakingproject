@@ -15,7 +15,6 @@
     background-color: white;
     border-left: rgb(255, 240, 242) solid 8rem;
     border-right: rgb(255, 240, 242) solid 8rem;
-    /* Height for border to span until the end of the page */
     height: 100%;
   }
 
@@ -39,7 +38,6 @@
     .main {
       border-left: 0rem;
       border-right: 0rem;
-
 
       background-color: rgb(255, 240, 242);
     }
@@ -89,6 +87,8 @@
     text-decoration: none;
   }
 
+  /* Links underlined in text */
+
   .intext {
     text-decoration: underline;
   }
@@ -116,6 +116,8 @@
       padding-right: 0rem;
     }
   }
+
+  /* Resize main navigation */
 
   @media screen and (max-width: 700px) {
     .mainnav {
